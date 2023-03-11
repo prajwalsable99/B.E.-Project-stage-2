@@ -108,7 +108,7 @@ const Recommender = () => {
         </div>
         
     </form>
-{op&&<div className=' bg-white text-black mt-2 text-2xl text-center'>Ideal crop to grow : {op}</div>}
+<div className='pb-5 bg-white text-black mt-2 text-2xl text-center'> {op&& `Ideal crop to grow : ${op}` }</div>
 </section>
 
  

@@ -55,7 +55,7 @@ function Predictor1(props) {
 
 
   return (
-    <section className="text-gray-600 body-font h-screen">
+    <section className="text-gray-600 body-font ">
 
 
       {
