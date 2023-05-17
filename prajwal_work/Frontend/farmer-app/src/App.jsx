@@ -15,6 +15,7 @@ import Diary from "./components/MoreServices.jsx/Diary";
 import Market from "./components/MoreServices.jsx/Market";
 import Calendar from "./components/MoreServices.jsx/Calendar";
 import MoreInfo from "./components/MoreServices.jsx/MoreInfo";
+import Top5crops from "./pages/Top5crops";
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
 
             <Route index element={<Home/>}></Route>
             <Route exact path="/features" element={<Features/>}></Route>
+            <Route exact path="/top5crops" element={<Top5crops/>}></Route>
+
             <Route exact path="/about" element={<About/>}></Route>
             <Route exact path="/visualpage" element={<VisualPage/>}></Route>
 

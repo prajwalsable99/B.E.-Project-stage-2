@@ -19,7 +19,7 @@ const WhatWeprovide = () => {
         Get the approximate yield of particular crop based on prevoius years location wise production statistics.
 
         </p>
-        <Link to= '/features/' className="mt-3 text-green-500 inline-flex items-center">Try 
+        <Link to= '/top5crops/' className="mt-3 text-green-500 inline-flex items-center">Try 
           <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>

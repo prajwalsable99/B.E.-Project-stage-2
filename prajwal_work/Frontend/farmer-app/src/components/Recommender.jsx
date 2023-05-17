@@ -56,7 +56,7 @@ const Recommender = () => {
     return (
 
     <section className="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 mt-10">
-    <h1 className="text-xl font-bold text-white capitalize dark:text-white">Get recommendation</h1>
+    <h1 className="text-xl font-bold text-yellow-500 text-center capitalize ">Get recommendation for crop</h1>
     <form ref={myref} onSubmit={onformsub}>
         <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
@@ -108,7 +108,7 @@ const Recommender = () => {
         </div>
         
     </form>
-<div className='pb-5 bg-white text-black mt-2 text-2xl text-center'> {op&& `Ideal crop to grow : ${op}` }</div>
+<div className='pb-5 bg-white text-black mt-2 text-2xl text-center'> {op&& `Ideal crop to grow : ${op}` } {!op&& `OUTPUT HERE`}</div>
 </section>
 
  

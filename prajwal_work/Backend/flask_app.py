@@ -81,6 +81,50 @@ def recommend():
 
 
 
+
+
+
+
+
+
+wheat_m=joblib.load('./top 5 crops/wheat.pkl')
+sugarcane_m=joblib.load('./top 5 crops/sugarcane.pkl')
+soyabean_m=joblib.load('./top 5 crops/soyabean.pkl')
+groundnut_m=joblib.load('./top 5 crops/groundnut.pkl')
+cotton_m=joblib.load('./top 5 crops/cotton.pkl')
+
+
+
+@app.post('/top5res')
+def top5res():
+    # Get the request data
+    try:
+        inp_data = request.get_json()
+
+        # Transform the data to match the model's input format
+        X = np.array([[inp_data['dcode'], inp_data['year'], inp_data['scode']]])
+
+        # Make the prediction
+        prediction1 = wheat_m.predict(X)
+        prediction2= sugarcane_m.predict(X)
+        prediction3 = groundnut_m.predict(X)
+        prediction4 = cotton_m.predict(X)
+        prediction5 = soyabean_m.predict(X)
+
+        
+        # print(prediction1)
+        # print(prediction2)
+        # print(prediction3)
+        # print(prediction4)
+        # print(prediction5)
+        # Return the prediction as JSON
+        return jsonify({'predictions': [prediction1[0],prediction2[0],prediction3[0],prediction4[0],prediction5[0]] ,"success":True}),200
+
+
+    except:
+        return jsonify({'error': 'Unable to fetch at moment  '}), 500
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 

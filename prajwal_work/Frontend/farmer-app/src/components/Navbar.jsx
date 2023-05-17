@@ -21,6 +21,12 @@ className={({ isActive }) => (isActive ? "text-black dark:text-black border-b-2 
         
         >features</NavLink>
 
+      <NavLink to="/top5crops" 
+        
+        className={({ isActive }) => (isActive ? "text-black dark:text-black border-b-2 border-black mx-1.5 sm:mx-6" : "border-b-2 border-transparent hover:text-black dark:hover:text-black hover:border-black mx-1.5 sm:mx-6")}
+        
+        >Top 5</NavLink>
+
 
         <NavLink to="/visualpage"
        className={({ isActive }) => (isActive ? "text-black dark:text-black border-b-2 border-black mx-1.5 sm:mx-6" : "border-b-2 border-transparent hover:text-black dark:hover:text-black hover:border-black mx-1.5 sm:mx-6")}
